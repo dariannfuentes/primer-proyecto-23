@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    padding: 10px;
+}
+
+.div {
+    padding: 5px;
+    max-width: 360px;
+    max-height: 300px;
+}

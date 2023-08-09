@@ -1,0 +1,19 @@
+<<<<<<< HEAD
+.container{
+=======
+.container {
+>>>>>>> 55ae6e88ea48852fd72129bc901ee7812a17173b
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+<<<<<<< HEAD
+.boton{
+=======
+.button {
+>>>>>>> 55ae6e88ea48852fd72129bc901ee7812a17173b
+    width: 120px;
+    margin: auto;
+}
