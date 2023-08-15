@@ -6,12 +6,7 @@ import { RegisterComponent } from './register/register.component';
 const routes: Routes = [
   {
     path:"login",component:LoginComponent
-<<<<<<< HEAD
   },{
-=======
-  },
-  {
->>>>>>> 55ae6e88ea48852fd72129bc901ee7812a17173b
     path:"register",component:RegisterComponent
   }
 ];

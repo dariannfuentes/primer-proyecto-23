@@ -1,39 +1,22 @@
 <div class="container">
     <div class="row">
-<<<<<<< HEAD
         <h1>Registrate</h1>
         <i class="material-icons" style="font-size: 200px">person</i>
 
         <mat-form-field appearance="fill">
             <mat-label>Ingrese un nombre de usuario</mat-label>
-            <input matInput placeholder="Usuario">
+            <input [(ngModel)]="usuarios.nombre" matInput placeholder="Usuario"  required>
         </mat-form-field>
-=======
-        <h1>Registrase aqui</h1>
-        <i class="material-icons" style="font-size: 200px">person</i>
-        
-            <mat-form-field appearance="fill">
-            <mat-label>Ingrese un nombre de usuario</mat-label>
-            <input matInput placeholder="nombre usuario">
-            </mat-form-field>
->>>>>>> 55ae6e88ea48852fd72129bc901ee7812a17173b
         
         <mat-form-field>
             <mat-label>Ingrese una contraseña</mat-label>
-            <input matInput [type]="hide ? 'password' : 'text'">
+            <input matInput [type]="hide ? 'password' : 'text'" #input minlength="6" [(ngModel)]="usuarios.contrasena" required>
             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-<<<<<<< HEAD
               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
+            <mat-hint align="start">Minimo: 6/{{input.value.length}}</mat-hint>
         </mat-form-field>
         
-        <button class="boton" mat-raised-button color="primary">Registrar</button>
-=======
-                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-            </button>
-        </mat-form-field>
-        
-        <button mat-raised-button color="primary">Registrar</button>        
->>>>>>> 55ae6e88ea48852fd72129bc901ee7812a17173b
+        <button class="boton" mat-raised-button color="primary" (click)="registrarse()">Registrar</button>
     </div>
 </div>
