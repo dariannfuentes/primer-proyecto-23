@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //FIREBASE
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat'; //Importacion firestore
-import { AngularFireStorageModule} from "@angular/fire/compat/storage"; //Importacion storage 
+import { AngularFireStorageModule} from "@angular/fire/compat/storage"; //Importacion storage (img)
 import { AngularFireAuthModule} from '@angular/fire/compat/auth'; //Importacion autentificacion
 
 @NgModule({

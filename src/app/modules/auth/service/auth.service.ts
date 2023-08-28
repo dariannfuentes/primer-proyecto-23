@@ -10,6 +10,19 @@ export class AuthService {
   constructor(public auth: AngularFireAuth) { }
 
   registrar(nombre: string, contrasena: string){
+    // retorna nuevo valor de nombre y contrasena
     return this.auth.createUserWithEmailAndPassword(nombre, contrasena)
+  }
+
+  // FUNCION PARA TOMAR UID
+  async getUid(){
+    // nos genera una promesa y 'user' la captura
+    const user = await this.auth.currentUser;
+
+    if(user == null){
+      return null;
+    }else{
+      return user.uid;
+    }
   }
 }
