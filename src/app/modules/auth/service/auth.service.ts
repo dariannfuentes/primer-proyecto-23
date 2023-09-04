@@ -9,9 +9,16 @@ export class AuthService {
   //referenciamos Auth de firebase
   constructor(public auth: AngularFireAuth) { }
 
-  registrar(nombre: string, contrasena: string){
+  //funcion para login
+  iniciarSesion(email: string,contrasena: string){
+    //funcion que valida email y contrasena en la BD
+    return this.auth.signInWithEmailAndPassword(email, contrasena);
+  }
+
+    //funcion para registrarse
+  registrar(email: string, contrasena: string){
     // retorna nuevo valor de nombre y contrasena
-    return this.auth.createUserWithEmailAndPassword(nombre, contrasena)
+    return this.auth.createUserWithEmailAndPassword(email, contrasena)
   }
 
   // FUNCION PARA TOMAR UID

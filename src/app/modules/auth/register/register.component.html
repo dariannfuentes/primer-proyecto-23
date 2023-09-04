@@ -3,11 +3,28 @@
         <h1>Registrate</h1>
         <i class="material-icons" style="font-size: 200px">person</i>
 
+        <!--Nombre-->
         <mat-form-field appearance="fill">
-            <mat-label>Ingrese un nombre de usuario</mat-label>
-            <input [(ngModel)]="usuarios.nombre" matInput placeholder="Usuario"  required>
+            <mat-label>Ingrese un nombre de usuario:</mat-label>
+            <input [(ngModel)]="usuarios.nombre" matInput type="text" required>
+        </mat-form-field>
+
+        <!--Email-->
+        <mat-form-field appearance="fill">
+            <mat-label>Ingrese un email</mat-label>
+            <!--Input que toma el email-->
+            <input [(ngModel)]="usuarios.email" matInput placeholder="Email"  required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Select</mat-label>
+            <mat-select [(ngModel)]="usuarios.rol" required>
+              <mat-option value="adm">Administrador</mat-option>
+              <mat-option value="vis">Visitante</mat-option>
+            </mat-select>
         </mat-form-field>
         
+        <!--Contraseña-->
         <mat-form-field>
             <mat-label>Ingrese una contraseña</mat-label>
             <input matInput [type]="hide ? 'password' : 'text'" #input minlength="6" [(ngModel)]="usuarios.contrasena" required>
