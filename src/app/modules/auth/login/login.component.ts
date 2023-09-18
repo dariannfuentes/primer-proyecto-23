@@ -39,4 +39,13 @@ export class LoginComponent {
     })
   }
 
+  //funcion par cerrar sesion
+  async salir(){
+    const res = await this.servicioAuth.cerrarSesion()
+    .then(res =>{
+      alert ("se ha deslogeado correctamente");
+      console.log(res);
+      this.router.navigate(['/inicio'])
+    })
+  }
 }

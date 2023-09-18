@@ -32,4 +32,9 @@ export class AuthService {
       return user.uid;
     }
   }
+
+  cerrarSesion(){
+    //devuelve un promesa vacia
+    return this.auth.signOut();
+  }
 }
