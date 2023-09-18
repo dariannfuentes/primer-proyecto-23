@@ -14,6 +14,9 @@ import { TableComponent } from './components/table/table.component';
   imports: [
     CommonModule,
     AdminRoutingModule
+  ],
+  exports:[
+    TableComponent
   ]
 })
 export class AdminModule { }

@@ -1,1 +1,74 @@
-<p>table works!</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Acciones</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <!-- Vamos a aplicar interpolacion -->
+            <th scope="row">1</th>
+            <td>nombre</td>
+            <td>imagen</td>
+            <td>descripcion</td>
+            <td>precio</td>
+            <td>acciones</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Boton que llama al modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Agregar producto
+</button>
+
+<!-- Modal para agregar productos -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Ingrese un nuevo producto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label">Ingrese nombre del producto:</label>
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label">Ingrese imagen del producto:</label>
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label">Ingrese descripcion del producto:</label>
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label">Ingrese precio del producto:</label>
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
